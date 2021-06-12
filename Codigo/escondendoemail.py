@@ -15,14 +15,14 @@ def easy_do():
             else:
                 verificando = copy.copy(email).split('@')[1]  # aqui estou copiando o email orginal e removendo tudo antes do @ para verificar se é gmail ou hotmail
                 copia1_email = copy.copy(email).split(
-                    '@')  # aqui estou seprando antes e o pós @ em listas, basta da um print para entender
+                    '@')  # aqui estou separando antes e o pós @ em listas, basta da um print para entender
                 tam_email = copia1_email[0]  # aqui estou pegando o email antes do @ sem o gmail.com/hotmail.com
                 dominio = copia1_email[1]
                 len_email = len(tam_email)  # aqui estou verificando o tamanho do email antes do @
                 subtraindo_um = len_email - 1  # estou removendo 1 do tamanho do len para mostra o tamanho correto do email, com a 1 letra
                 primeira_letra = copia1_email[0][0]
                 if verificando == 'gmail.com' or verificando == 'hotmail.com':
-                    censurado = '*' * subtraindo_um  # aqui estou multiplicando o tamanho de * pelo tamanho do subitraindo 1 para por como * censurado
+                    censurado = '*' * subtraindo_um  # aqui estou multiplicando o tamanho de * pelo tamanho do subtraindo 1 para por como * censurado
 
                     print(f'{primeira_letra}{censurado}@{dominio}')
                 while True:
